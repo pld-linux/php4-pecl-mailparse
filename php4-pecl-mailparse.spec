@@ -38,9 +38,9 @@ To rozszerzenie ma w PECL status: %{_status}.
 %build
 cd %{_modname}-%{version}
 phpize
-%configure 
+%configure
 
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -68,5 +68,5 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc %{_modname}-%{version}/CREDITS
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/conf.d/%{_modname}.ini
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/conf.d/%{_modname}.ini
 %attr(755,root,root) %{extensionsdir}/%{_modname}.so
