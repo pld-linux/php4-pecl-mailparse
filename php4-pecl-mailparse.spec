@@ -15,7 +15,7 @@ Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 URL:		http://pecl.php.net/package/mailparse/
 BuildRequires:	php4-devel
 BuildRequires:	rpmbuild(macros) >= 1.238
-%requires_php_extension
+%{?requires_php_extension}
 Requires:	%{_sysconfdir}/conf.d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
