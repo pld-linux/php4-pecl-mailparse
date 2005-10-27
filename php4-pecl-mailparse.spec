@@ -7,14 +7,14 @@ Summary:	Email message manipulation
 Summary(pl):	Obrabianie wiadomo¶ci E-mail
 Name:		php4-pecl-%{_modname}
 Version:	2.1.1
-Release:	1
+Release:	2
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	14c058d79f1f6c01aa53273565bd4a54
 URL:		http://pecl.php.net/package/mailparse/
 BuildRequires:	php4-devel
-BuildRequires:	rpmbuild(macros) >= 1.238
+BuildRequires:	rpmbuild(macros) >= 1.248
 %{?requires_php_extension}
 Requires:	%{_sysconfdir}/conf.d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
