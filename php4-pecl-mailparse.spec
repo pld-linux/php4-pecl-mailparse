@@ -4,7 +4,7 @@
 %define		extensionsdir	%{_libdir}/php4
 
 Summary:	Email message manipulation
-Summary(pl):	Obrabianie wiadomo∂ci E-mail
+Summary(pl.UTF-8):   Obrabianie wiadomo≈õci E-mail
 Name:		php4-pecl-%{_modname}
 Version:	2.1.1
 Release:	2
@@ -25,9 +25,9 @@ It can deal with rfc822 and rfc2045 (MIME) compliant messages.
 
 In PECL status of this package is: %{_status}.
 
-%description -l pl
-Mailparse to rozszerzenie do analizy i pracy z wiadomo∂ciami poczty
-elektronicznej. Radzi sobie z wiadomo∂ciami zgodnymi z RFC822 oraz
+%description -l pl.UTF-8
+Mailparse to rozszerzenie do analizy i pracy z wiadomo≈õciami poczty
+elektronicznej. Radzi sobie z wiadomo≈õciami zgodnymi z RFC822 oraz
 RFC2024 (MIME).
 
 To rozszerzenie ma w PECL status: %{_status}.
