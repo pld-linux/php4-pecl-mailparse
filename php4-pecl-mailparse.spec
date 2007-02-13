@@ -4,7 +4,7 @@
 %define		extensionsdir	%{_libdir}/php4
 
 Summary:	Email message manipulation
-Summary(pl.UTF-8):   Obrabianie wiadomości E-mail
+Summary(pl.UTF-8):	Obrabianie wiadomości E-mail
 Name:		php4-pecl-%{_modname}
 Version:	2.1.1
 Release:	2
