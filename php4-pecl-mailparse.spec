@@ -2,7 +2,6 @@
 %define		_status		stable
 %define		_sysconfdir	/etc/php4
 %define		extensionsdir	%{_libdir}/php4
-
 Summary:	Email message manipulation
 Summary(pl.UTF-8):	Obrabianie wiadomości E-mail
 Name:		php4-pecl-%{_modname}
@@ -14,9 +13,9 @@ Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	14c058d79f1f6c01aa53273565bd4a54
 URL:		http://pecl.php.net/package/mailparse/
 BuildRequires:	php4-devel
-BuildRequires:	rpmbuild(macros) >= 1.322
+BuildRequires:	rpmbuild(macros) >= 1.344
+Requires:	php4-common >= 3:4.4.0-3
 %{?requires_php_extension}
-Requires:	%{_sysconfdir}/conf.d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,13 +55,11 @@ EOF
 rm -rf $RPM_BUILD_ROOT
 
 %post
-[ ! -f /etc/apache/conf.d/??_mod_php4.conf ] || %service -q apache restart
-[ ! -f /etc/httpd/httpd.conf/??_mod_php4.conf ] || %service -q httpd restart
+%php4_webserver_restart
 
 %postun
 if [ "$1" = 0 ]; then
-	[ ! -f /etc/apache/conf.d/??_mod_php4.conf ] || %service -q apache restart
-	[ ! -f /etc/httpd/httpd.conf/??_mod_php4.conf ] || %service -q httpd restart
+	%php4_webserver_restart
 fi
 
 %files
